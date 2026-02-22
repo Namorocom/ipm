@@ -5,14 +5,14 @@ import {MatIconModule} from '@angular/material/icon';
   selector: 'app-about',
   imports: [MatIconModule],
   template: `
-    <section class="bg-primary text-white py-20">
+    <section class="bg-primary text-white py-20 animate-fade-in-up">
       <div class="section-padding">
         <h1 class="text-4xl md:text-6xl mb-6">Sobre a Instituição</h1>
         <p class="text-xl text-blue-100 max-w-3xl">Conheça a nossa história, os nossos valores e o compromisso que temos com o futuro de Angola.</p>
       </div>
     </section>
 
-    <section class="section-padding">
+    <section class="section-padding animate-fade-in-up animate-delay-200">
       <div class="grid md:grid-cols-2 gap-16">
         <div>
           <h2 class="text-3xl text-primary mb-6">Nossa História</h2>

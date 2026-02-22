@@ -7,7 +7,7 @@ import {MatIconModule} from '@angular/material/icon';
   imports: [RouterLink, MatIconModule],
   template: `
     <!-- Hero Section -->
-    <section class="relative h-[80vh] flex items-center overflow-hidden">
+    <section class="relative h-[80vh] flex items-center overflow-hidden animate-fade-in-up">
       <div class="absolute inset-0 z-0">
         <img 
           src="https://picsum.photos/seed/school-admin/1920/1080?blur=2" 
@@ -30,7 +30,7 @@ import {MatIconModule} from '@angular/material/icon';
               <mat-icon class="mr-2">school</mat-icon>
               Conheça os nossos cursos
             </a>
-            <a routerLink="/contacto" class="btn-outline !border-white !text-white hover:!bg-white/10">
+            <a routerLink="/inscricao" class="btn-outline !border-white !text-white hover:!bg-white/10">
               <mat-icon class="mr-2">edit_note</mat-icon>
               Faça a sua inscrição
             </a>
@@ -40,7 +40,7 @@ import {MatIconModule} from '@angular/material/icon';
     </section>
 
     <!-- Brief Presentation -->
-    <section class="section-padding">
+    <section class="section-padding animate-fade-in-up animate-delay-200">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 class="text-3xl md:text-4xl text-primary mb-6">Excelência no Ensino Técnico</h2>
@@ -81,7 +81,7 @@ import {MatIconModule} from '@angular/material/icon';
     </section>
 
     <!-- Featured Courses Preview -->
-    <section class="bg-gray-50 py-20">
+    <section class="bg-gray-50 py-20 animate-fade-in-up animate-delay-300">
       <div class="section-padding">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl text-primary mb-4">Nossas Áreas de Especialização</h2>

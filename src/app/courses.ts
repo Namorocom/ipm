@@ -5,14 +5,14 @@ import {MatIconModule} from '@angular/material/icon';
   selector: 'app-courses',
   imports: [MatIconModule],
   template: `
-    <section class="bg-gray-900 text-white py-20">
+    <section class="bg-gray-900 text-white py-20 animate-fade-in-up">
       <div class="section-padding">
         <h1 class="text-4xl md:text-6xl mb-6">Cursos Disponíveis</h1>
         <p class="text-xl text-gray-400 max-w-3xl">Programas curriculares desenhados para o sucesso profissional imediato.</p>
       </div>
     </section>
 
-    <section class="section-padding">
+    <section class="section-padding animate-fade-in-up animate-delay-200">
       <div class="grid md:grid-cols-2 gap-8">
         @for (course of courses; track course.id) {
           <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all group">

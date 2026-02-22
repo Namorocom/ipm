@@ -18,6 +18,10 @@ export const routes: Routes = [
     loadComponent: () => import('./contact').then(m => m.Contact),
   },
   {
+    path: 'inscricao',
+    loadComponent: () => import('./enrollment').then(m => m.Enrollment),
+  },
+  {
     path: '**',
     redirectTo: '',
   }

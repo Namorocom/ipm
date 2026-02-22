@@ -6,7 +6,7 @@ import {MatIconModule} from '@angular/material/icon';
   selector: 'app-contact',
   imports: [ReactiveFormsModule, MatIconModule],
   template: `
-    <section class="bg-gray-100 py-20">
+    <section class="bg-gray-100 py-20 animate-fade-in-up">
       <div class="section-padding">
         <div class="grid md:grid-cols-2 gap-16">
           <!-- Contact Info & Location -->
