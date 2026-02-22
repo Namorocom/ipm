@@ -1,0 +1,5 @@
+{
+  "name": "Instituto Médio Politécnico do Maiombe",
+  "description": "Site institucional do Instituto Médio Politécnico do Maiombe, focado na formação técnica administrativa de excelência.",
+  "requestFramePermissions": ["geolocation"]
+}

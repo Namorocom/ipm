@@ -1,0 +1,109 @@
+<div class="min-h-screen flex flex-col">
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a routerLink="/" class="flex items-center gap-3 group" (click)="closeMenu()">
+        <div class="bg-primary p-2 rounded-lg group-hover:bg-primary-light transition-colors">
+          <mat-icon class="text-white">school</mat-icon>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-primary leading-none text-lg">IMPM</span>
+          <span class="text-[10px] uppercase tracking-widest text-gray-500 font-medium">Maiombe</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-8">
+        <a routerLink="/" routerLinkActive="text-primary font-semibold" [routerLinkActiveOptions]="{exact: true}" class="text-gray-600 hover:text-primary transition-colors">Início</a>
+        <a routerLink="/sobre" routerLinkActive="text-primary font-semibold" class="text-gray-600 hover:text-primary transition-colors">Sobre</a>
+        <a routerLink="/cursos" routerLinkActive="text-primary font-semibold" class="text-gray-600 hover:text-primary transition-colors">Cursos</a>
+        <a routerLink="/contacto" routerLinkActive="text-primary font-semibold" class="text-gray-600 hover:text-primary transition-colors">Contacto</a>
+        <a routerLink="/contacto" class="btn-primary !py-2 !px-5 text-sm">
+          Inscrições
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button (click)="toggleMenu()" class="md:hidden p-2 text-gray-600">
+        <mat-icon>{{ isMenuOpen() ? 'close' : 'menu' }}</mat-icon>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    @if (isMenuOpen()) {
+      <div class="md:hidden bg-white border-b border-gray-100 py-6 px-6 space-y-4 shadow-xl">
+        <a routerLink="/" (click)="closeMenu()" class="block text-gray-600 font-medium">Início</a>
+        <a routerLink="/sobre" (click)="closeMenu()" class="block text-gray-600 font-medium">Sobre</a>
+        <a routerLink="/cursos" (click)="closeMenu()" class="block text-gray-600 font-medium">Cursos</a>
+        <a routerLink="/contacto" (click)="closeMenu()" class="block text-gray-600 font-medium">Contacto</a>
+        <a routerLink="/contacto" (click)="closeMenu()" class="btn-primary w-full justify-center">Inscrições</a>
+      </div>
+    }
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <router-outlet />
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <!-- Brand -->
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="bg-primary p-2 rounded-lg">
+              <mat-icon class="text-white">school</mat-icon>
+            </div>
+            <span class="font-display font-bold text-xl">Instituto Médio Politécnico do Maiombe</span>
+          </div>
+          <p class="text-gray-400 max-w-md">
+            Excelência na formação técnica administrativa. Preparando os profissionais que construirão o futuro das organizações em Angola.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-bold mb-6 text-lg">Links Rápidos</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li><a routerLink="/" class="hover:text-white transition-colors">Início</a></li>
+            <li><a routerLink="/sobre" class="hover:text-white transition-colors">Sobre Nós</a></li>
+            <li><a routerLink="/cursos" class="hover:text-white transition-colors">Cursos Técnicos</a></li>
+            <li><a routerLink="/contacto" class="hover:text-white transition-colors">Contactos</a></li>
+          </ul>
+        </div>
+
+        <!-- Social & Contact -->
+        <div>
+          <h4 class="font-bold mb-6 text-lg">Siga-nos</h4>
+          <div class="flex gap-4 mb-8">
+            <a href="#" class="bg-white/10 p-2 rounded-full hover:bg-primary transition-colors">
+              <mat-icon class="text-sm">facebook</mat-icon>
+            </a>
+            <a href="#" class="bg-white/10 p-2 rounded-full hover:bg-primary transition-colors">
+              <mat-icon class="text-sm">camera_alt</mat-icon>
+            </a>
+          </div>
+          <div class="text-gray-400 text-sm">
+            <p class="flex items-center gap-2 mb-2">
+              <mat-icon class="text-xs">call</mat-icon> +244 923 000 000
+            </p>
+            <p class="flex items-center gap-2">
+              <mat-icon class="text-xs">email</mat-icon> geral&#64;impm-maiombe.ao
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+        <p>© {{ currentYear }} Instituto Médio Politécnico do Maiombe. Todos os direitos reservados.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white">Privacidade</a>
+          <a href="#" class="hover:text-white">Termos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
